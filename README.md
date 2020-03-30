@@ -1,0 +1,1 @@
+##### A react-native demo that contains react-native official website components and some usual error that I met in  rn projects as well as some usual third part componets that used in rn project such as 'react-navigatin' and so on
