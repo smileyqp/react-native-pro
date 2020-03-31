@@ -12,6 +12,7 @@ import RegisterPage from '../pages/account/RegisterPage'
 // import HomePage from "../pages/HomePage";
 import {connect} from 'react-redux';
 import {createReactNavigationReduxMiddleware, reduxifyNavigator} from 'react-navigation-redux-helpers';
+// import DynamicTabNavigator from './DynamicTabNavigator'
 
 
 
@@ -27,6 +28,14 @@ const InitNavigator = createStackNavigator({
 });
 
 
+// const MainNavigator = createStackNavigator({
+//     HomePage: {
+//         screen: <DynamicTabNavigator/>,
+//         navigationOptions: {
+//             header: null, 
+//         }
+//     }
+// });
 
 // const MainNavigator = createStackNavigator({
 //     AreaPage: {

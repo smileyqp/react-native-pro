@@ -14,7 +14,7 @@ class WelcomePage extends Component {
   render() {
     return (
     <View style={styles.container}>
-      <Text style={styles.text}>smileyqp</Text>
+      <Text style={styles.text}>welcome to smileyqp app</Text>
     </View>
     );
   }
@@ -36,8 +36,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'pink'
-  }
+    backgroundColor:'#890'
+  },
+  text: {
+    fontSize: 30,
+    color: '#FFFFFF',
+  },
 })
 
 
