@@ -11,6 +11,7 @@ class WelcomePage extends Component {
     console.disableYellowBox = true;//是否出现错误提示框
   }
   
+  
   render() {
     return (
     <View style={styles.container}>
