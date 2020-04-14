@@ -20,10 +20,12 @@ class WelcomePage extends Component {
           useAngle={true}
           angle={-45}
           angleCenter={{x:0,y:0}}
-          colors={['#FF6666','#FF6600']}
+          colors={['#FF6666','#FFFF99']}
           style={styles.container}>
+        <StatusBar hidden={true} />
         <View style={styles.container}>
-          <Text style={styles.text}>welcome to smileyqp</Text>
+          <Text style={styles.text}>welcome to React Native</Text>
+          <Text style={styles.text}>by Smileyqp</Text>
         </View>
       </LinearGradient>
     );
