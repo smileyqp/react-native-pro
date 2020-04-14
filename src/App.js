@@ -1,3 +1,6 @@
+if(__DEV__) {
+  import('./utils/ReactotronConfig').then(() => console.log('Reactotron Configured'))
+}
 import React from 'react';
 import { Provider } from 'react-redux'
 import store from "./store";
