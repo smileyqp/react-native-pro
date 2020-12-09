@@ -9,6 +9,7 @@ import {createStackNavigator,
 import WelcomePage from "../pages/welcome/WelcomePage";
 import LoginPage from '../pages/account/LoginPage'
 import RegisterPage from '../pages/account/RegisterPage'
+import HomePage  from '../pages/HomePage'
 // import HomePage from "../pages/HomePage";
 import {connect} from 'react-redux';
 import {createReactNavigationReduxMiddleware, reduxifyNavigator} from 'react-navigation-redux-helpers';
@@ -28,14 +29,14 @@ const InitNavigator = createStackNavigator({
 
 
 
-// const MainNavigator = createStackNavigator({
-//     AreaPage: {
-//         screen: AreaPage,
-//     },
-// },{
-//     initialRouteName: 'AreaPage',
-//     headerMode:'none'
-//   });
+const MainNavigator = createStackNavigator({
+    HomePage: {
+        screen: HomePage,
+    },
+},{
+    initialRouteName: 'HomePage',
+    headerMode:'none'
+  });
 
 // const DrawerNavigator = createDrawerNavigator({
 //     Main: {
@@ -57,26 +58,32 @@ const InitNavigator = createStackNavigator({
 
 const LoginNavigator = createStackNavigator(
     {
-        LoginPage:LoginPage
+        LoginPage:{
+            screen:LoginPage,
+            navigationOptions:{
+                headerShown:false,
+            }
+        }
     },
-
-    {initialRouteName:'LoginPage',
-    
-}
-    
-    );
-
-export const RootNavigator = createAppContainer(createSwitchNavigator({
-    Init: InitNavigator,
-    // Main: MainNavigator,
-    login:LoginNavigator,
-    RegisterPage:RegisterPage,
-    // Drawer:DrawerNavigator,
-}, {
-    defaultNavigationOptions: {
-        header: null,
+    {
+        RegisterPage:RegisterPage
+    },
+    {
+        initialRouteName:'LoginPage'
     }
-}));
+    );
+    const SwitchNavigator = createSwitchNavigator({
+        Init: InitNavigator,
+        Main: MainNavigator,
+        login:LoginNavigator,
+        // RegisterPage:RegisterPage,
+        // Drawer:DrawerNavigator,
+    }, {
+        defaultNavigationOptions: {
+            header: null,
+        }
+    })
+export const RootNavigator = createAppContainer(SwitchNavigator);
 
 /**
  * 1.初始化react-navigation与redux的中间件，
