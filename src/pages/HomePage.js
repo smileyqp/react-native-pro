@@ -20,22 +20,27 @@ export default class HomePage extends Component{
                     barStyle={'dark-content'} //两个参数 dark-content 和 light-content,请根据实际情况设置
                     translucent
                     backgroundColor="rgba(0, 0, 0, 0)"
-                    />
-                    <View style={styles.topCon}>
-                        <LinearGradient
-                            useAngle={true}
-                            // angle={-69}
-                            start={{x: 0, y: 0}} end={{x: 1, y: 1}}
-                            angleCenter={{x:0,y:0}}
-                            colors={['#5992F8','#5D67EB']}
-                            style={styles.header}>
-                        </LinearGradient>
-                        <View style={styles.decorateOne}>
+                />
+                <View style={styles.topCon}>
+                    <LinearGradient
+                        useAngle={true}
+                        // angle={-69}
+                        start={{x: 0, y: 0}} end={{x: 1, y: 1}}
+                        angleCenter={{x:0,y:0}}
+                        colors={['#5992F8','#5D67EB']}
+                        style={styles.header}>
+                    </LinearGradient>
+                    <View style={styles.decorateOne}>
 
-                        </View>
                     </View>
+                </View>
+                <View style={styles.container}>
+                    <Text style={styles.titleIn}>主功能区</Text>
+                    <View style={styles.navCon}>
+                        <View></View>
+                    </View>
+                </View>
                     
-               <Text>homepage</Text>
             </SafeAreaView>
         );
          
@@ -45,16 +50,13 @@ export default class HomePage extends Component{
 
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        
-    },
     topCon:{
         height:140+HEADER_HEIGHT,
         // backgroundColor:'yellow',
         borderColor:'red',
         borderWidth:1,
-        position:'relative'
+        position:'relative',
+        backgroundColor:'#f7faff'
     },
     header:{
         height: HEADER_HEIGHT,
@@ -72,5 +74,24 @@ const styles = StyleSheet.create({
         position:'absolute',
         left:10,
         top:'40%'
+    },
+    container:{
+        flex:1,
+        backgroundColor:"#f7faff",
+    },
+    titleIn:{
+        height:30,
+        lineHeight:30,
+        fontWeight:"bold",
+        borderWidth:1,
+        borderColor:'yellow',
+        paddingLeft:10,
+        fontSize: 18,
+        color:'#262525'
+    },
+    navCon:{
+        height:120,
+        borderWidth:1,
+        borderColor:'pink',
     }
 })
