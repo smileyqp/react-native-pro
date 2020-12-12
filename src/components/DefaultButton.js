@@ -30,7 +30,7 @@ class DefaultButton extends Component {
 
 const styles = StyleSheet.create({
     buttonBox:{
-        backgroundColor:CommonColors.ThemeColor,
+        backgroundColor:'#00C2BF',
         width:281,
         height:40,
         borderRadius:20,

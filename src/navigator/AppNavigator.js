@@ -32,6 +32,9 @@ const InitNavigator = createStackNavigator({
 const MainNavigator = createStackNavigator({
     HomePage: {
         screen: HomePage,
+        navigationOptions:{
+            header:null
+        }
     },
 },{
     initialRouteName: 'HomePage',
@@ -61,7 +64,7 @@ const LoginNavigator = createStackNavigator(
         LoginPage:{
             screen:LoginPage,
             navigationOptions:{
-                headerShown:false,
+                header:null,
             }
         }
     },
@@ -69,7 +72,8 @@ const LoginNavigator = createStackNavigator(
         RegisterPage:RegisterPage
     },
     {
-        initialRouteName:'LoginPage'
+        initialRouteName:'LoginPage',
+        headerMode:'none'
     }
     );
     const SwitchNavigator = createSwitchNavigator({

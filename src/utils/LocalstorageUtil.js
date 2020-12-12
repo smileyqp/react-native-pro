@@ -19,7 +19,9 @@ export default class LocalstorageUtil {
         AsyncStorage.getItem(key, (error, value) => {
             console.log("=====loacalStorage====",value)
             if(value == null){
-                NavigationUtil.goToLoginPage()
+                // NavigationUtil.goToLoginPage()
+                NavigationUtil.goToHomePage();
+
             }else{
                 NavigationUtil.goToHomePage();
             }

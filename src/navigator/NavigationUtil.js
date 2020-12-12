@@ -67,7 +67,7 @@ export default class NavigationUtil {
        navigation.navigate("HomePage");
    }
    static goToHomePage() {
-       NavigationUtil.navSave.navigate('AreaPage')
+       NavigationUtil.navSave.navigate('HomePage')
    }
    static goToLoginPage () {
        NavigationUtil.navSave.navigate('LoginPage')

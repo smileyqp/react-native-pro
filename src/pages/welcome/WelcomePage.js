@@ -33,19 +33,20 @@ componentWillMount() {
     NavigationUtil.navSave = this.props.navigation;
     return (
       <LinearGradient
-      useAngle={true}
-      angle={-45}
-      angleCenter={{x:0,y:0}}
-      colors={['#FF6666','#FFFF99']}
-      style={styles.container}>
-    <StatusBar hidden={true} />
-    <View style={styles.container}>
-      <Text style={styles.text}>welcome to React Native</Text>
-      <Text style={styles.text}>by Smileyqp</Text>
+        useAngle={true}
+        // angle={-69}
+        start={{x: 0, y: 0}} end={{x: 1, y: 1}}
+        angleCenter={{x:0,y:0}}
+        colors={['#5992F8','#5D67EB']}
+        style={styles.container}>
+        <StatusBar hidden={true} />
+        <View style={styles.container}>
+          <Text style={styles.text}>welcome to React Native</Text>
+          <Text style={styles.text}>by Smileyqp</Text>
 
-    </View>
+        </View>
 
-  </LinearGradient>
+      </LinearGradient>
     );
   }
 }
