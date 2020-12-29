@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, StatusBar,Image} from 'react-native';
+import {Platform, StyleSheet, Text, View, StatusBar,Image,ImageBackground} from 'react-native';
 import {connect} from 'react-redux';
 import LoginInput from '../../components/LoginInput';
 import userIcon from '../../assets/user.png';
@@ -22,12 +22,12 @@ class LoginPage extends Component {
   render() {
     return (
         <View style={styles.container}>
-              
-          <StatusBar
-            barStyle={'dark-content'} //两个参数 dark-content 和 light-content,请根据实际情况设置
-            translucent
-            backgroundColor="rgba(0, 0, 0, 0)"
-            />
+          <ImageBackground source={require("../../assets/login-bg.png")} style={styles.bgimage}>
+            <StatusBar
+              barStyle={'dark-content'} //两个参数 dark-content 和 light-content,请根据实际情况设置
+              translucent
+              backgroundColor="rgba(0, 0, 0, 0)"
+              />
                 <Image style={styles.logoStyle} source={require("../../assets/logo.png")} />
 
               <LoginInput
@@ -46,6 +46,8 @@ class LoginPage extends Component {
                 onChange={value => this.setState({ password: value})}
                 />
                 <DefaultButton onPress={this.login} style={styles.btnStyle}>登录</DefaultButton>
+          </ImageBackground>
+          
 
         </View>
         
@@ -69,14 +71,21 @@ export default connect(mapStateToProps)(LoginPage);
 
 const styles = StyleSheet.create({
   container:{
-      flex:1,
-      backgroundColor:'#fff',
-      alignItems:'center'
+    flex:1,
+    flexDirection: "column"
+  },
+  bgimage:{
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignItems:'center',
+    position:'relative'
   },
   logoStyle:{
-      width:100,
-      height:100,
-      marginTop:100
+    width:100,
+    height:120,
+    position:'absolute',
+    top:100
   },
   userIconStyle:{
       width:11,
