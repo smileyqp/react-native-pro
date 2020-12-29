@@ -17,6 +17,17 @@ class LoginPage extends Component {
       password:''
     };
   }
+  UNSAFE_componentWillMount(){
+    const {dispatch} = this.props;
+    console.log('asjdasdjlaksdjalksjdlkasjdlkasl')
+    dispatch({
+      type:'LOGIN_CAPTCHAIMG',
+      callback:(res)=>{
+        console.log(res)
+      }
+    })
+  }
+
   login(){}
   
   render() {
